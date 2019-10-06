@@ -17,7 +17,7 @@ namespace PriorityQueueLibrary
         {
             count++;
             ResizeIfNeeded();
-            backingArray[Count() - 1] = value;
+            backingArray[count - 1] = value;
             SwitchPlacesIfNeeded();
 
         }
@@ -35,8 +35,12 @@ namespace PriorityQueueLibrary
 
         public T Pop()
         {
-
-            return backingArray[0];
+            T temp = backingArray[0];
+            backingArray[0] = backingArray[count - 1];
+            backingArray[count - 1] = default;
+            count--;
+            SwitchPlacesIfNeeded();
+            return temp;
         }
 
         private void ResizeIfNeeded()
@@ -58,7 +62,7 @@ namespace PriorityQueueLibrary
 
         private void SwitchPlacesIfNeeded()
         {
-            for (int i = count-1; i < 0; i--)
+            for (int i = 0; i < count; i++)
             {
                 if (backingArray[i].CompareTo(backingArray[(i - 1)/2]) == -1)
                 {

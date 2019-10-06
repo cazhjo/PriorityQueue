@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQueueLibrary", "PriorityQueueLibrary\PriorityQueueLibrary.csproj", "{503D47FC-11D2-416A-B41C-5F28516812C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueueLibrary", "PriorityQueueLibrary\PriorityQueueLibrary.csproj", "{503D47FC-11D2-416A-B41C-5F28516812C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQueue_Tests", "PriorityQueue_Tests\PriorityQueue_Tests.csproj", "{C7BA0453-DC79-4FFF-96CF-CD18ECF7D403}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "temp", "temp\temp.csproj", "{03C3BA32-0CF4-453D-8004-96329E9FC768}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueue_Tests", "PriorityQueue_Tests\PriorityQueue_Tests.csproj", "{C7BA0453-DC79-4FFF-96CF-CD18ECF7D403}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{C7BA0453-DC79-4FFF-96CF-CD18ECF7D403}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7BA0453-DC79-4FFF-96CF-CD18ECF7D403}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7BA0453-DC79-4FFF-96CF-CD18ECF7D403}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03C3BA32-0CF4-453D-8004-96329E9FC768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03C3BA32-0CF4-453D-8004-96329E9FC768}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03C3BA32-0CF4-453D-8004-96329E9FC768}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03C3BA32-0CF4-453D-8004-96329E9FC768}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
