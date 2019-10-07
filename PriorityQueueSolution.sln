@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueueLibrary", "Pri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueue_Tests", "PriorityQueue_Tests\PriorityQueue_Tests.csproj", "{C7BA0453-DC79-4FFF-96CF-CD18ECF7D403}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{E1B02731-CF80-4D3C-BC27-64FE95F492A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C7BA0453-DC79-4FFF-96CF-CD18ECF7D403}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7BA0453-DC79-4FFF-96CF-CD18ECF7D403}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7BA0453-DC79-4FFF-96CF-CD18ECF7D403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B02731-CF80-4D3C-BC27-64FE95F492A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B02731-CF80-4D3C-BC27-64FE95F492A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B02731-CF80-4D3C-BC27-64FE95F492A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B02731-CF80-4D3C-BC27-64FE95F492A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,8 +31,13 @@ namespace Tests
             que.Add(2);
 
             que.Pop();
+            que.Pop();
+            que.Pop();
+            que.Pop();
+            que.Pop();
+            que.Pop();
 
-            Assert.IsTrue(que.Pop() == 3);
+            Assert.IsTrue(que.Pop() == 8);
         }
 
     }
