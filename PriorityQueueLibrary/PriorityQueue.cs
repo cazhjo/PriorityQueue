@@ -28,14 +28,14 @@ namespace PriorityQueueLibrary
 
         public T Peek()
         {
-            return count != 0 ? backingList[0] : throw new InvalidOperationException("Cannot call Peek on an empty list");
+            return count != 0 ? backingList[0] : throw new InvalidOperationException("Cannot call Peek() on an empty list");
         }
 
         public T Pop()
         {
             if (count == 0)
             {
-                throw new InvalidOperationException("Cannot call Pop on an empty list");
+                throw new InvalidOperationException("Cannot call Pop() on an empty list");
             }
             else
             {
@@ -54,11 +54,11 @@ namespace PriorityQueueLibrary
         {
             int i = count - 1;
 
-            while (backingList[i].CompareTo(backingList[(i - 1) / 2]) == -1) 
+            while (backingList[i].CompareTo(backingList[Parent(i)]) < 0) 
             {
-                SwapTwoElements(i, (i - 1) / 2);
+                SwapTwoElements(i, Parent(i));
 
-                i = (i - 1) / 2;
+                i = Parent(i);
             }
         }
 
@@ -67,7 +67,7 @@ namespace PriorityQueueLibrary
 
             if (count == 2)
             {
-                if(backingList[0].CompareTo(backingList[1]) == 1)
+                if(backingList[0].CompareTo(backingList[1]) > 0)
                 {
                     SwapTwoElements(0, 1);
                     return;
@@ -83,21 +83,21 @@ namespace PriorityQueueLibrary
             }
 
             int i = 0;
-            while (backingList[i].CompareTo(backingList[2 * i + 1]) == 1 || backingList[i].CompareTo(backingList[2 * i + 2]) == 1)
+            while (backingList[i].CompareTo(backingList[LeftChild(i)]) > 0 || backingList[i].CompareTo(backingList[RightChild(i)]) > 0)
             {
-                if(backingList[2 * i + 1].CompareTo(backingList[2 * i + 2]) == -1)
+                if(backingList[LeftChild(i)].CompareTo(backingList[RightChild(i)]) < 0)
                 {
-                    SwapTwoElements(i, 2 * i + 1);
+                    SwapTwoElements(i, LeftChild(i));
 
-                    i = 2 * i + 1;
+                    i = LeftChild(i);
                 }
                 else
                 {
-                    SwapTwoElements(i, 2 * i + 2);
-                    i = 2 * i + 2;
+                    SwapTwoElements(i, RightChild(i));
+                    i = RightChild(i);
                 }
 
-                if(2 * i + 1 >= count || 2 * i + 2 >= count)
+                if(LeftChild(i) >= count || RightChild(i) >= count)
                 {
                     break;
                 }
@@ -110,6 +110,21 @@ namespace PriorityQueueLibrary
             T temp = backingList[index1];
             backingList[index1] = backingList[index2];
             backingList[index2] = temp;
+        }
+
+        private int Parent(int index)
+        {
+            return (index - 1) / 2;
+        }
+
+        private int LeftChild(int index)
+        {
+            return 2 * index + 1;
+        }
+
+        private int RightChild(int index)
+        {
+            return 2 * index + 2;
         }
     }
 }
