@@ -28,14 +28,14 @@ namespace PriorityQueueLibrary
 
         public T Peek()
         {
-            return count != 0 ? backingList[0] : throw new InvalidOperationException();
+            return count != 0 ? backingList[0] : throw new InvalidOperationException("Cannot call Peek on an empty list");
         }
 
         public T Pop()
         {
             if (count == 0)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Cannot call Pop on an empty list");
             }
             else
             {
