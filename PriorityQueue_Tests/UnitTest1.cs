@@ -7,7 +7,7 @@ namespace Tests
     public class Tests
     {
         [Test]
-        public void TestThatAdd_Works()
+        public void TestThatAdd_WorksWithInt()
         {
             PriorityQueue<int> que = new PriorityQueue<int>();
             que.Add(15);
@@ -23,6 +23,47 @@ namespace Tests
             que.Add(5);
             que.Add(4);
             que.Add(3);
+            que.Add(2);
+            que.Add(1);
+
+            Assert.AreEqual(1, que.Peek());
+        }
+
+        [Test]
+        public void TestThatAdd_WorksWithString()
+        {
+            PriorityQueue<string> que = new PriorityQueue<string>();
+            que.Add("yz");
+            que.Add("vwx");
+            que.Add("stu");
+            que.Add("pqr");
+            que.Add("mno");
+            que.Add("jkl");
+            que.Add("ghi");
+            que.Add("def");
+            que.Add("abc");
+            
+            
+            Assert.AreEqual("abc", que.Peek());
+        }
+
+        [Test]
+        public void TestThatPeek_Works()
+        {
+            PriorityQueue<int> que = new PriorityQueue<int>();
+            que.Add(4);
+            que.Add(4);
+            que.Add(4);
+            que.Add(5);
+            que.Add(5);
+            que.Add(4);
+            que.Add(4);
+            que.Add(6);
+            que.Add(6);
+            que.Add(4);
+            que.Add(8);
+            que.Add(8);
+            que.Add(2);
             que.Add(2);
             que.Add(1);
 
