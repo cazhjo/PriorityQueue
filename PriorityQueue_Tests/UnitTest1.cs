@@ -33,6 +33,9 @@ namespace Tests
         public void TestThatPop_Works()
         {
             PriorityQueue<int> que = new PriorityQueue<int>();
+            int[] poppedNumbers = new int[10];
+            int[] expectedNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
             que.Add(10);
             que.Add(9);
             que.Add(8);
@@ -44,19 +47,18 @@ namespace Tests
             que.Add(2);
             que.Add(1);
 
-            que.Pop();
-            que.Pop();
-            que.Pop();
-            que.Pop();
-            que.Pop();
-            que.Pop();
+            for (int i = 0; i < poppedNumbers.Length; i++)
+            {
+                poppedNumbers[i] = que.Pop();
+            }
 
-            Assert.AreEqual(7, que.Pop());
+
+            CollectionAssert.AreEqual(expectedNumbers, poppedNumbers);
             
         }
 
         [Test]
-        public void TestThatPeek_OnEmptyList_ThrowsInvalidOperationException()
+        public void TestThatPeek_OnEmptyQueue_ThrowsInvalidOperationException()
         {
             PriorityQueue<int> que = new PriorityQueue<int>();
 
@@ -65,12 +67,20 @@ namespace Tests
         }
 
         [Test]
-        public void TestThatPop_OnEmptyList_ThrowsInvalidOperationException()
+        public void TestThatPop_OnEmptyQueue_ThrowsInvalidOperationException()
         {
             PriorityQueue<int> que = new PriorityQueue<int>();
 
             Assert.Throws<InvalidOperationException>(() => que.Pop());
 
+        }
+
+        [Test]
+        public void TestThatCount_OnEmptyQueue_ReturnsZero()
+        {
+            PriorityQueue<int> que = new PriorityQueue<int>();
+
+            Assert.AreEqual(0, que.Count());
         }
     }
 }

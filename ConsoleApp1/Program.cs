@@ -1,6 +1,7 @@
 ﻿using System;
 using IPriorityQueue;
 using PriorityQueueLibrary;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -24,8 +25,6 @@ namespace ConsoleApp1
             //que.Pop();
             //que.Pop();
             //que.Pop();
-
-
 
             PriorityQueueTester.TestPriorityQueue(() => new PriorityQueue<int>(), () => new PriorityQueue<string>());
         }
